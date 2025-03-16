@@ -11,17 +11,32 @@ class Book{
     }
 }
 const arrBooks=[new Book(1,"aaa","drama",false),new Book(2,"bbb","dat",true),new Book(3,"ccc","metach",true),new Book(4,"ddd","regesh",false)]
+
+const fs=require('fs')
+function initBook() {
+    const jsonData = JSON.stringify(arrBooks, null, 2);
+    fs.writeFileSync("books.json", jsonData, "utf8");
+}
+
 function printBook() {
-    for (const book of arrBooks) {
+    const rawData = fs.readFileSync("books.json", "utf8");
+    const books = JSON.parse(rawData);
+    const arrBook = books.map(b => new Book(b.code, b.name, b.type, b.taked));
+
+    for (const book of arrBook) {
         console.log(book.code+" "+book.name+" "+book.type+" "+book.taked)
     }
 }
 function takeBook(code) {
-    for (const book of arrBooks) {
+    const rawData = fs.readFileSync("books.json", "utf8");
+    const books = JSON.parse(rawData);
+    const arrBook = books.map(b => new Book(b.code, b.name, b.type, b.taked));
+
+    for (const book of arrBook) {
         if(book.code==code){
             return book
         }
     }
     throw new Error("this code doesn't exist")
 }
-module.exports={printBook,takeBook}
+module.exports={initBook,printBook,takeBook}

@@ -1,5 +1,8 @@
-const {printBook,takeBook} = require('./books')
-const {printUser,takeUser} = require('./users')
+import {initBook,printBook,takeBook} from './books.js'
+import {initUser,printUser,takeUser} from './users.js'
+
+//initBook()
+initUser()
 
 printBook()
 printUser()
@@ -7,8 +10,10 @@ printUser()
 console.log(takeBook(1));
 console.log(takeUser(123));
 
-const book = takeBook(4)
-const user = takeUser(123)
+const args = process.argv.slice(2);
+
+const book = takeBook(args[0])
+const user = takeUser(args[1])
 if(book.taked){
     console.log("the book is taked");
     console.log();
