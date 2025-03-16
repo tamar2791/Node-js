@@ -25,4 +25,4 @@ function takeUser(user) {
     }
     throw new Error("invalid user")
 }
-module.export={printUser,takeUser}
+module.exports={printUser,takeUser}

@@ -24,4 +24,4 @@ function takeBook(code) {
     }
     throw new Error("invalid code")
 }
-module.export={printBook,takeBook}
+module.exports={printBook,takeBook}
