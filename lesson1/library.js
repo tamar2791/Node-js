@@ -3,10 +3,10 @@ const {printUser,takeUser} = require('./users')
 
 printBook()
 printUser()
-console.log(takeBook(111));
-console.log(takeUser(1234567));
+console.log(takeBook(1));
+console.log(takeUser(123));
 
-const book = takeBook(1)
+const book = takeBook(4)
 const user = takeUser(123)
 if(book.taked){
     console.log("the book is taked");

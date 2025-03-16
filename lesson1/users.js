@@ -13,13 +13,12 @@ class User{
 const arrUsers=[new User(123,"a","regesh",false),new User(111,"b","metach",true),new User(555,"c","dat",false),new User(777,"d","regesh",true)]
 function printUser() {
     for (const user of arrUsers) {
-        console.log(user.id+" "+user.name+" "+user.type+" "+user.taked)
+        console.log(user.id+" "+user.name+" "+user.type+" "+user.take)
     }
 }
 function takeUser(user) {
     for (const u of arrUsers) {
         if(u.id==user){
-            u.take=true
             return u
         }
     }

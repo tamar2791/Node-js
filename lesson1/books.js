@@ -22,6 +22,6 @@ function takeBook(code) {
             return book
         }
     }
-    throw new Error("invalid code")
+    throw new Error("this code doesn't exist")
 }
 module.exports={printBook,takeBook}
