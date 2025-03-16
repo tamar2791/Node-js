@@ -1,4 +1,4 @@
-const {takeBook,printBook} = require('./books')
+const {printBook,takeBook} = require('./books')
 const {printUser,takeUser} = require('./users')
 
 printBook()
@@ -6,8 +6,8 @@ printUser()
 console.log(takeBook(111));
 console.log(takeUser(1234567));
 
-const  book = takeBook(111)
-const user = takeUser(1237654)
+const book = takeBook(1)
+const user = takeUser(123)
 if(book.taked){
     console.log("the book is taked");
     console.log();
