@@ -1,0 +1,26 @@
+[
+  {
+    "id": 123,
+    "name": "a",
+    "type": "regesh",
+    "take": false
+  },
+  {
+    "id": 111,
+    "name": "b",
+    "type": "metach",
+    "take": true
+  },
+  {
+    "id": 555,
+    "name": "c",
+    "type": "dat",
+    "take": false
+  },
+  {
+    "id": 777,
+    "name": "d",
+    "type": "regesh",
+    "take": true
+  }
+]
