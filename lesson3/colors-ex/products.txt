@@ -1,0 +1,5 @@
+phone
+fax
+computer
+cammera
+calculator
