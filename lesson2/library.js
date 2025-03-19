@@ -1,5 +1,5 @@
-import {initBook,printBook,takeBook} from './books.js'
-import {initUser,printUser,takeUser} from './users.js'
+import { initBook, printBook, takeBook } from './books.js'
+import { initUser, printUser, takeUser } from './users.js'
 
 //initBook()
 initUser()
@@ -14,18 +14,18 @@ const args = process.argv.slice(2);
 
 const book = takeBook(args[0])
 const user = takeUser(args[1])
-if(book.taked){
+if (book.taked) {
     console.log("the book is taked");
     console.log();
 }
-if(user.take){
+if (user.take) {
     console.log("the user taked other book");
     console.log();
 }
-if(book.type != user.type ){
-   console.log("the book's type doesnt match to the user's type");
-   console.log();
+if (book.type != user.type) {
+    console.log("the book's type doesnt match to the user's type");
+    console.log();
 }
-if(book.type == user.type && !book.taked && !user.take){
+if (book.type == user.type && !book.taked && !user.take) {
     console.log("The loan was completed successfully.");
 }
