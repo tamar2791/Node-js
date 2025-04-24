@@ -45,7 +45,7 @@ const server2 = http.createServer((req, res) => {
     }
     else if (req.url === '/' && req.method === 'GET') {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
-        fs.readFile('./IMG_3041.JPG', (err, data) => {
+        fs.readFile( './שירה עם משקפיים.jpg', (err, data) => {
             res.write(data);
             res.end();
         });
