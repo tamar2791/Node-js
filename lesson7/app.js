@@ -10,6 +10,10 @@ import {connectDB} from './config/db.js';
 
 config();
 connectDB();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 const server = express();
 server.use(cors());
 if (process.env.NODE_ENV === 'development') {
