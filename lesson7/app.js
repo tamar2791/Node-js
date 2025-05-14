@@ -11,10 +11,12 @@ import {connectDB} from './config/db.js';
 config();
 connectDB();
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 const server = express();
+
+server.use(express.json());
+server.use(express.urlencoded({ extended: true }));
+
 server.use(cors());
 if (process.env.NODE_ENV === 'development') {
     server.use(morgan('dev'));
